@@ -1,0 +1,15 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'myapp/style.css' %}">
+
+{% if question_list %}
+    <ul>
+    {% for question in question_list %}
+        {% comment %} <li><a href="/myapp/{{ question.id }}/">{{ question.question_text }}</a></li></br> {% endcomment %}
+        {% comment %} link to redirect details page. {% endcomment %}
+        <li><a href="{% url 'myapp:detail' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}

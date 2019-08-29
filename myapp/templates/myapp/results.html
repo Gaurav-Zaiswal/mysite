@@ -1,0 +1,11 @@
+<h1>{{ result.question_text }}</h1>
+<h1>{{ result.pub_date }}</h1>
+
+
+<ul>
+{% for choice in result.choice_set.all %}
+    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'myapp:detail' result.id %}">Vote again?</a>
