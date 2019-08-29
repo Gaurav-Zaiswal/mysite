@@ -15,7 +15,7 @@ SECRET_KEY = '9(9)&eetxi-pncv#809&uedyip^_wk3-u948_$r=sndga^1lw3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
